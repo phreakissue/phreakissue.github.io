@@ -54,12 +54,12 @@ body {
       filter: grayscale(1) invert(1);
     }
 
-} 
+}
 
 #grid { 
     display: grid; 
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.6fr 0.6fr 0.2fr 0.8fr 0.4fr 1.2fr 0.8fr 0.4fr 1.2fr; 
+    grid-template-rows: 0.6fr 0.6fr 0.2fr 0.8fr 0.4fr 1.2fr 0.8fr 0.4fr 1.2fr;
 }
     
 #grid img {
@@ -189,6 +189,7 @@ body {
     font-family: Cozette, sans-serif;
     text-transform: uppercase;
     display: flex; 
+    font-size: 1rem;
     justify-content: center;
     align-items: center;
 }
@@ -276,6 +277,18 @@ body {
     grid-row: 9/10;
 }
 
+@media (max-width: 600px) {
+    
+    #grid { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    #innercontent {
+        flex-direction: column;
+    }
+ 
+}
 
 footer { 
     min-height: 100vh;
