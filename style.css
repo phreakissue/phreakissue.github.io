@@ -10,6 +10,10 @@
     src: url(CozetteVector.woff);
 }
 
+html { 
+    font-size: 1.1vw;
+}
+
 header { 
     background-color: black; 
     background-size: cover;
@@ -159,12 +163,14 @@ body {
     background-color: #000;
     font-family: Libre Franklin, sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 4rem;
     display: flex; 
     flex-direction: center;
-    align-items: center;
-    justify-content: center;
+}
+
+#blackSpan {
+    opacity: 0;
 }
 
 #grid > div:nth-child(9) { 
@@ -175,7 +181,6 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: steps(1);
 }
-
 
 @keyframes imagechange {
     0%   {background-image: url("media/mika4.jpg");}
@@ -219,7 +224,7 @@ body {
     cursor: pointer;
     transition: all 4s ease-out;
     background: black;
-    background: linear-gradient(to left, black 50%, white 50%) right;
+    background: linear-gradient(to left, black 50.5%, white 49.5%) right;
     background-size: 200%;
     transition: all .5s ease-out;
 }
@@ -264,7 +269,27 @@ body {
     display: flex; 
     flex-direction: center;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
+}
+
+#shiningText {
+  color: #ffffff;
+  background: linear-gradient(to right, #ffffff 0, rgb(252, 0, 0) 40%, #ffffff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@keyframes shine {
+  0%
+     {background-position: 0;}
+  100%
+    {background-position: 22.5rem;}
 }
 
 #grid > div:nth-child(15) {
@@ -277,17 +302,33 @@ body {
     grid-row: 9/10;
 }
 
+
 @media (max-width: 600px) {
     
+    html { 
+        font-size: 1rem;
+    }
+
     #grid { 
         display: flex;
         flex-direction: column;
     }
 
+    #grid > div:nth-child(9) { 
+        height: 100vh;
+    }
+
     #innercontent {
         flex-direction: column;
     }
+
+    #ftext {
+        flex-direction: column;
+    }
  
+    #ftext div {
+         width: 75%;
+    }
 }
 
 footer { 
@@ -309,16 +350,6 @@ footer {
     flex-grow: 1;
 }
 
-@media (max-width: 1000px) {
-    
-   #ftext {
-       flex-direction: column;
-   }
-
-   #ftext div {
-        width: 75%;
-   }
-}   
 
 #ftext div {
     padding: 15px;
