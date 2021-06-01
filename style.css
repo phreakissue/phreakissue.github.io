@@ -177,15 +177,17 @@ body {
     grid-column: 1/4;
     background-size: cover;
     animation-name: imagechange;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(1);
 }
 
 @keyframes imagechange {
     0%   {background-image: url("media/mika4.jpg");}
-    33%  {background-image: url("media/untamed2.jpg");}
-    66% {background-image: url("media/mika1.jpg");}
+    20%  {background-image: url("media/amo2.jpg");}
+    40% {background-image: url("media/mika5.jpg");}
+    60% {background-image: url("media/mika6.jpg");}
+    80% {background-image: url("media/jermine4.jpg");}
 }
 
 #grid > div:nth-child(10) { 
